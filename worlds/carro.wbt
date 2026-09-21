@@ -20,7 +20,7 @@ RectangleArena {
   floorAppearance PBRAppearance {
     baseColorMap DEF floorBase ImageTexture {
       url [
-        "https://raw.githubusercontent.com/sergiolmm/webot/refs/heads/main/mapas/oval_line.png"
+        "../Design sem nome.png"
       ]
     }
     roughnessMap USE floorBase
@@ -30,7 +30,7 @@ RectangleArena {
   }
 }
 Robot {
-  translation -0.7054496245047306 -0.5501053504798151 -5.454157512266171e-05
+  translation -0.776624 -0.373975 -0.00362712
   rotation -0.00940007816797626 0.006343580514217991 0.99993569669089 1.9549022388799342
   children [
     Pose {
@@ -49,8 +49,8 @@ Robot {
             }
           ]
           endPoint Solid {
-            translation -0.02491416380607276 -2.1552346256563745e-09 0.022911257176169098
-            rotation -4.45844661608482e-08 0.9999999999999981 4.1003028216914115e-08 1.4871543508211338
+            translation -0.024914163806072753 -2.1552346256563745e-09 0.022911257176169098
+            rotation -4.4584466197425586e-08 0.9999999999999981 4.100302825055326e-08 1.4871543508211338
             children [
               DEF RodaE Pose {
                 translation 0 0.055 0.025
@@ -74,8 +74,6 @@ Robot {
             physics Physics {
               mass 0.05
             }
-            linearVelocity -0.09450989666622037 0.23105279133797194 1.4296776206598464e-05
-            angularVelocity -9.259109038473701 -3.773445656238695 -0.09236021590848797
           }
         }
         HingeJoint {
@@ -92,8 +90,8 @@ Robot {
             }
           ]
           endPoint Solid {
-            translation 0.024937271144369895 2.1568908366023205e-09 0.023208098046179643
-            rotation 4.405872612152843e-08 -0.9999999999999982 4.1006421063287544e-08 1.4990632520918534
+            translation 0.02493727114436989 2.1568908366023197e-09 0.023208098046179643
+            rotation 4.4058726140713914e-08 -0.9999999999999982 4.100642108114389e-08 1.4990632520918534
             children [
               DEF RodaD Pose {
                 translation 0 -0.055 0.025
@@ -119,8 +117,6 @@ Robot {
               density -1
               mass 0.05
             }
-            linearVelocity -0.09073924799794776 0.22174474087780774 -1.4298944069324507e-05
-            angularVelocity -9.259454681609764 -3.772596981482697 -0.09245910366230999
           }
         }
         DEF Corpo Pose {
@@ -221,6 +217,4 @@ Robot {
     mass 0.05
   }
   controller "car_control"
-  linearVelocity -0.09266193428824458 0.22638275738125418 3.8319026231192525e-06
-  angularVelocity 0.0014341174201181956 0.00045671488565654674 -0.09242453737857334
 }
