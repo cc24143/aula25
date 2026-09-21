@@ -1,0 +1,226 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/RectangleArena.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation 0.5844661323907017 0.5468617752963097 -0.5994510312010676 2.1359563428535777
+  position 0.28821231530252217 -0.06261799478223329 3.6161735398772135
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 2 2
+  floorTileSize 2 2
+  floorAppearance PBRAppearance {
+    baseColorMap DEF floorBase ImageTexture {
+      url [
+        "https://raw.githubusercontent.com/sergiolmm/webot/refs/heads/main/mapas/oval_line.png"
+      ]
+    }
+    roughnessMap USE floorBase
+    normalMap USE floorBase
+    occlusionMap USE floorBase
+    emissiveColorMap USE floorBase
+  }
+}
+Robot {
+  translation -0.7054496245047306 -0.5501053504798151 -5.454157512266171e-05
+  rotation -0.00940007816797626 0.006343580514217991 0.99993569669089 1.9549022388799342
+  children [
+    Pose {
+      children [
+        HingeJoint {
+          jointParameters HingeJointParameters {
+            position 2828.9205425189202
+            axis 0 1 0
+            anchor 0 0 0.025
+          }
+          device [
+            RotationalMotor {
+              name "motorE"
+              consumptionFactor 70
+              maxVelocity 100
+            }
+          ]
+          endPoint Solid {
+            translation -0.02491416380607276 -2.1552346256563745e-09 0.022911257176169098
+            rotation -4.45844661608482e-08 0.9999999999999981 4.1003028216914115e-08 1.4871543508211338
+            children [
+              DEF RodaE Pose {
+                translation 0 0.055 0.025
+                rotation 1 0 0 1.5707996938995747
+                children [
+                  Shape {
+                    appearance PBRAppearance {
+                      baseColor 1 0.3 1
+                      roughness 1
+                      metalness 0
+                    }
+                    geometry Cylinder {
+                      height 0.01
+                      radius 0.025
+                    }
+                  }
+                ]
+              }
+            ]
+            boundingObject USE RodaE
+            physics Physics {
+              mass 0.05
+            }
+            linearVelocity -0.09450989666622037 0.23105279133797194 1.4296776206598464e-05
+            angularVelocity -9.259109038473701 -3.773445656238695 -0.09236021590848797
+          }
+        }
+        HingeJoint {
+          jointParameters HingeJointParameters {
+            position 2675.137877543706
+            axis 0 1 0
+            anchor 0 0 0.025
+          }
+          device [
+            RotationalMotor {
+              name "motorD"
+              consumptionFactor 70
+              maxVelocity 100
+            }
+          ]
+          endPoint Solid {
+            translation 0.024937271144369895 2.1568908366023205e-09 0.023208098046179643
+            rotation 4.405872612152843e-08 -0.9999999999999982 4.1006421063287544e-08 1.4990632520918534
+            children [
+              DEF RodaD Pose {
+                translation 0 -0.055 0.025
+                rotation 1 0 0 1.5707996938995747
+                children [
+                  Shape {
+                    appearance PBRAppearance {
+                      baseColor 1 0.3 1
+                      roughness 1
+                      metalness 0
+                    }
+                    geometry Cylinder {
+                      height 0.01
+                      radius 0.025
+                    }
+                  }
+                ]
+              }
+            ]
+            name "solid(1)"
+            boundingObject USE RodaD
+            physics Physics {
+              density -1
+              mass 0.05
+            }
+            linearVelocity -0.09073924799794776 0.22174474087780774 -1.4298944069324507e-05
+            angularVelocity -9.259454681609764 -3.772596981482697 -0.09245910366230999
+          }
+        }
+        DEF Corpo Pose {
+          translation 0 0 0.07
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 1 0.7 0.4
+                roughness 1
+                metalness 0
+              }
+              geometry Box {
+                size 0.1 0.1 0.05
+              }
+            }
+          ]
+        }
+        Pose {
+          children [
+            DistanceSensor {
+              translation 0.05 0.05 0.05
+              rotation 0 1 0 1.5708
+              children [
+                Shape {
+                  appearance PBRAppearance {
+                    baseColor 0.8 0.4 0.5
+                    roughness 1
+                    metalness 0
+                  }
+                  geometry Cylinder {
+                    height 0.01
+                    radius 0.01
+                  }
+                }
+              ]
+              name "DSE"
+              lookupTable [
+                0 0 0
+                0.1 10 0
+              ]
+              type "infra-red"
+              redColorSensitivity 0.5
+            }
+            DistanceSensor {
+              translation 0.05 -0.05 0.05
+              rotation 0 1 0 1.5708
+              children [
+                Shape {
+                  appearance PBRAppearance {
+                    baseColor 0.8 0.4 0.5
+                    roughness 1
+                    metalness 0
+                  }
+                  geometry Cylinder {
+                    height 0.01
+                    radius 0.01
+                  }
+                }
+              ]
+              name "DSD"
+              lookupTable [
+                0 0 0
+                0.1 10 0
+              ]
+              type "infra-red"
+              redColorSensitivity 0.5
+            }
+            DistanceSensor {
+              translation 0.055 0 0.09
+              rotation 1 0 0 1.5707996938995747
+              children [
+                Shape {
+                  appearance PBRAppearance {
+                    baseColor 0.8 0.4 0.5
+                    roughness 1
+                    metalness 0
+                  }
+                  geometry Cylinder {
+                    height 0.01
+                    radius 0.01
+                  }
+                }
+              ]
+              name "DS"
+              lookupTable [
+                0 0 0
+                0.1 10 0
+              ]
+              type "infra-red"
+              redColorSensitivity 0.5
+            }
+          ]
+        }
+      ]
+    }
+  ]
+  physics Physics {
+    mass 0.05
+  }
+  controller "car_control"
+  linearVelocity -0.09266193428824458 0.22638275738125418 3.8319026231192525e-06
+  angularVelocity 0.0014341174201181956 0.00045671488565654674 -0.09242453737857334
+}
