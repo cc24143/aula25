@@ -20,7 +20,7 @@ RectangleArena {
   floorAppearance PBRAppearance {
     baseColorMap DEF floorBase ImageTexture {
       url [
-        "../Design sem nome.png"
+        "https://raw.githubusercontent.com/cc24143/aula25/refs/heads/main/Design%20sem%20nome.png"
       ]
     }
     roughnessMap USE floorBase
@@ -30,14 +30,14 @@ RectangleArena {
   }
 }
 Robot {
-  translation -0.776624 -0.373975 -0.00362712
-  rotation -0.00940007816797626 0.006343580514217991 0.99993569669089 1.9549022388799342
+  translation 0.7697681056127941 -0.5108337318484047 -5.222261749083147e-05
+  rotation 0.012564731886689329 0.014004890095411927 0.9998229796149071 -1.4627822140398195
   children [
     Pose {
       children [
         HingeJoint {
           jointParameters HingeJointParameters {
-            position 2828.9205425189202
+            position 4425.596682533883
             axis 0 1 0
             anchor 0 0 0.025
           }
@@ -49,8 +49,8 @@ Robot {
             }
           ]
           endPoint Solid {
-            translation -0.024914163806072753 -2.1552346256563745e-09 0.022911257176169098
-            rotation -4.4584466197425586e-08 0.9999999999999981 4.100302825055326e-08 1.4871543508211338
+            translation -0.01969834997684411 -2.1552346256563732e-09 0.0403965389919194
+            rotation -1.9993310561826646e-08 0.999999999999999 4.100302725110256e-08 2.2342263421687516
             children [
               DEF RodaE Pose {
                 translation 0 0.055 0.025
@@ -78,7 +78,7 @@ Robot {
         }
         HingeJoint {
           jointParameters HingeJointParameters {
-            position 2675.137877543706
+            position 4230.80530827855
             axis 0 1 0
             anchor 0 0 0.025
           }
@@ -90,8 +90,8 @@ Robot {
             }
           ]
           endPoint Solid {
-            translation 0.02493727114436989 2.1568908366023197e-09 0.023208098046179643
-            rotation 4.4058726140713914e-08 -0.9999999999999982 4.100642108114389e-08 1.4990632520918534
+            translation -0.01989122795780572 2.156890836602315e-09 0.040146532773890395
+            rotation -2.0316478963991645e-08 -0.999999999999999 4.1006423960831714e-08 4.06158869778535
             children [
               DEF RodaD Pose {
                 translation 0 -0.055 0.025
